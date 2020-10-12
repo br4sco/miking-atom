@@ -1,0 +1,14 @@
+{
+  "name": "miking-atom",
+  "version": "0.0.0",
+  "description": "Basic language package for mcore",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/atom/miking-atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
