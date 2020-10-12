@@ -6,7 +6,7 @@
     "language",
     "grammar"
   ],
-  "repository": "https://github.com/atom/miking-atom",
+  "repository": "https://github.com/br4sco/miking-atom",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

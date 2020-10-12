@@ -28,11 +28,11 @@
       "patterns": [
         {
           "name": "keyword.control.mcore",
-          "match": "\\b(Lam|con|else|end|fix|if|in|lam|lang|let|match|recursive|sem|syn|then|type|use|with)\\b"
+          "match": "\\b(con|else|end|fix|if|in|lam|lang|let|match|recursive|sem|syn|then|type|use|with)\\b"
         },
         {
           "name": "keyword.operator.arithmetic.mcore",
-          "match": "\\b(not|and|or|add|addi|subi|muli|leqi|divi|modi|negi|lti|gti|geqi|eqi|neqi|sub|mul|div|neg|negf|mulf|subf|addf|divf)\\b"
+          "match": "\\b(addi|subi|muli|leqi|divi|modi|negi|lti|gti|geqi|eqi|neqi|negf|mulf|subf|addf|divf|ltf|gtf|eqf|neqf)\\b"
         }
       ]
     },
@@ -40,7 +40,7 @@
       "patterns": [
         {
           "name": "entity.name.function.mcore",
-          "match": "\\b(utest|mexpr|include|never)\\b"
+          "match": "\\b(utest|using|mexpr|include|never)\\b"
         }
       ]
     },
@@ -86,7 +86,7 @@
       "patterns": [
         {
           "name": "storage.type.mcore",
-          "match": "\\b(Int|Float|Bool|Dyn)\\b"
+          "match": "\\b(Int|Float|Bool|Char|Dyn)\\b"
         }
       ]
     },
