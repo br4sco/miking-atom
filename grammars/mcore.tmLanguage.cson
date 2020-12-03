@@ -1,0 +1,88 @@
+name: 'MLang'
+scopeName: 'source.mlang'
+fileTypes: [
+  'mc'
+]
+patterns: [
+  {
+    include: '#comments'
+  },
+  {
+    include: '#constants'
+  },
+  {
+    include: '#keywords'
+  },
+  {
+    include: '#builtins'
+  }
+]
+repository:
+  comments:
+    patterns: [
+      {
+        name: 'comment.line.mlang',
+        begin: '--',
+        end: '\n'
+      },
+      {
+        name: 'comment.block.mlang',
+        begin: '-/',
+        end: '\\-'
+      }
+    ]
+  constants:
+    patterns: [
+      {
+        name: 'string.quote.double.mlang',
+        begin: '\"',
+        end: '\"',
+        patterns: [
+          {
+            name: 'constant.character.escape.mlang',
+            match: '\\\\.'
+          }
+        ]
+      },
+      {
+        name: 'string.quote.single.mlang',
+        begin: '\'',
+        end: '\'',
+        patterns: [
+          {
+            name: 'constant.character.escape.mlang',
+            match: '\\\\.'
+          }
+        ]
+      },
+      {
+        name: 'constant.language.mlang',
+        match: '\\b(true|false)\\b'
+      },
+      {
+        name: 'constant.numeric.integer.mlang',
+        match: '\\b[0-9][0-9]*\\b'
+      },
+      {
+        name: 'constant.numeric.floating-point.mlang',
+        match: '\\b[0-9][0-9_]*((\.([0-9][0-9_]*([eE][+-]??[0-9][0-9_]*)?)?)|([eE][+-]??[0-9][0-9_]*))\\b'
+      }
+    ]
+  keywords:
+    patterns: [
+      {
+        name: 'keyword.other.mlang'
+        match: '\\b(let|in|if|then|else|match|lam|syn|sem|lang|utest|with|using|recursive|end|include|use|type|con|mexpr|never)\\b',
+      }
+    ]
+  builtins:
+    patterns: [
+      {
+        name: 'support.type.mlang',
+        match: '\\b(Unknown|Int|Float|Bool|Char|String)\\b'
+      },
+      {
+        name: 'support.function.mlang',
+        match: '\\b(addi|subi|muli|divi|modi|negi|lti|leqi|gti|geqi|eqi|neqi|slli|srli|srai|arity|addf|subf|mulf|divf|negf|ltf|leqf|gtf|geqf|eqf|neqf|floorfi|ceilfi|roundfi|int2float|string2float|eqc|char2int|int2char|makeSeq|length|concat|get|set|cons|snoc|splitAt|reverse|print|dprint|readLine|readBytesAsString|argv|readFile|writeFile|fileExists|deleteFile|error|exit|eqsym|gensym|sym2hash|randIntU|randSetSeed|wallTimeMs|sleepMs)\\b'
+      }
+    ]
