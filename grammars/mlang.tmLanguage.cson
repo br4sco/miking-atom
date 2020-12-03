@@ -27,8 +27,8 @@ repository:
       },
       {
         name: 'comment.block.mlang',
-        begin: '-/',
-        end: '\\-'
+        begin: '/-',
+        end: '-/'
       }
     ]
   constants:
