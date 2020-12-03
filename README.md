@@ -10,7 +10,7 @@ https://github.com/br4sco/tree-sitter-mcore. Contributions are welcome.
 # Installation
 
 To use this packages it is easiest to install it via atoms package manager,
-(i.e. `settings->install`).
+(i.e. `settings->install`). The name of the package is `language-miking`.
 
 # CTAGS definitions
 
