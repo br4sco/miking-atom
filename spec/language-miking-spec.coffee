@@ -6,11 +6,11 @@ describe "Miking grammar", ->
 
   beforeEach ->
     waitsForPromise ->
-      atom.packages.activatePackage("miking-atom")
+      atom.packages.activatePackage("language-miking")
 
     runs ->
-      grammar = atom.syntax.grammarForScopeName("source.miking")
+      grammar = atom.syntax.grammarForScopeName("source.mlang")
 
   it "parses the grammar", ->
     expect(grammar).toBeTruthy()
-    expect(grammar.scopeName).toBe "source.miking"
+    expect(grammar.scopeName).toBe "source.mlang"
